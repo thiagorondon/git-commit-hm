@@ -3,7 +3,7 @@
 function whatthecommit() {
     message="$(curl -s -L http://whatthecommit.com/ | tail -n9 | head -n1| sed -e 's/<p>//')"
 
-    echo -n "$message (y/n/q)?"
+    echo "$message (y/n/q)?"
     read answer
 
     case "$answer" in
